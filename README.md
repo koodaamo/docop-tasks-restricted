@@ -12,5 +12,8 @@ For packaged tasks with more permissive licenses, see: https://github.com/koodaa
 
 Extract plain text content of the HTML string.
 
-- input: HTML text in the `html` field
-- output: plaintext in the `text` field
+Expects HTML text in the `html` field of document.
+Output document will have following fields set:
+  - `text` field containing the plain text content of the HTML
+  - `fingerprint` generated from the text field for e.g. detecting changes
+  - `modified` field indicating when text was changed, based on fingerprint, in HTTP Last-Modified format
